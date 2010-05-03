@@ -155,6 +155,17 @@ vauth_getpw(user, domain)
 		}
 	}
 
+	/* SET HASH->{pw_clear_passwd} */
+	if (pwd->pw_clear_passwd != NULL) {
+		/* warn("pw_clear_passwd = %s\n", pwd->pw_clear_passwd); */
+		svval = newSVpv( pwd->pw_clear_passwd, strlen(pwd->pw_clear_passwd) );
+		/* make the string that will be the key */
+		strcpy( name, "pw_clear_passwd");
+		ssv = hv_store( h, name, strlen( name ), svval, 0 );
+		if ( ssv == NULL ) {
+			croak( "oops: key %s not stored", name );
+		}
+	}
 
 	/* SET HASH->{pw_gecos} */
 	if (pwd->pw_gecos != NULL) {
