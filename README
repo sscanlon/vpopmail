@@ -1,5 +1,5 @@
 Sorry for the lack of docs.
-please see [ http://bluedot.net/ ] for more information / support.
+please see [ http://github.com/sscanlon/vpopmail ] for more information / support.
 
 I've tested this with vpopmail-3.4.11.released, vpopmail-4.8.5 and
 vpopmail-4.9.[7,10] running perl 5.6.0, but should work with 5.004_03 +
@@ -41,7 +41,7 @@ and the new:
 
 adddomain(domainname, directory, uid, gid);
 
-sorry is this creates any confusion..
+sorry if this creates any confusion..
 
 
 Drop me an email let me know how you are using this module, and
